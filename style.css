@@ -58,9 +58,15 @@ h2{
         line-height: 1.8;
         word-spacing:10px;
         text-shadow: 2px 2px 5px green;
-        font-family: serif;
+       
         /* the first two is for the shadow and the last one is for the blur effect */
+        font-family: serif;
     }
+    /* font-styles are normal, italic or oblique and font-weight is normal or bold, 
+    font-variant is normal and small-caps, font-size in px, em oe percentage, em allows easy
+    resizing, you can use google font by adding to the link and seperate different fonts with a pipe
+    google also enable font-effects the value will be the efffect name and multiple effect can be added
+    to a single font */
     
     /* the box-sizing is used to keep the width irrespective of the padding size */
 
