@@ -62,6 +62,34 @@ h2{
         /* the first two is for the shadow and the last one is for the blur effect */
         font-family: serif;
     }
+    .list{
+        list-style-type: circle;
+        color: purple;
+        list-style-position: inside;
+    }
+    .list2{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        /* list-style-type: lower-roman; */
+        /* image can be used it will be list-type-image */
+    } 
+    ul{
+        width: 30%;
+        background-color: red;
+        padding:20px;
+    }
+    ul li{
+        background-color: yellow;
+        margin: 5px;
+        padding: 10px;
+    }
+    .list3{
+        width: 30%;
+        background-color:purple;
+        margin:30px;
+        padding: 12px;
+    }
     /* font-styles are normal, italic or oblique and font-weight is normal or bold, 
     font-variant is normal and small-caps, font-size in px, em oe percentage, em allows easy
     resizing, you can use google font by adding to the link and seperate different fonts with a pipe
@@ -82,3 +110,27 @@ background attachment is for whether the background image shopuld be fixed or sc
 /* css outline offset sets space between the border and the outline */
 
 /* outline ids drawn around elemnts outside the borders */
+table{
+    width:50%;
+    color:brown;
+    border:1px solid;
+    border-collapse: collapse;
+}
+
+th{
+    height:70px;
+    border:1px solid;
+    vertical-align: top;
+    padding:10px;
+    border-bottom: 1px solid green;
+}
+td{
+    border:1px solid;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid green;
+}
+tr:nth-child(even){background-color: green;
+
+}
+/* display are either in iline or blocck, you can set a default block element to inline and vice versa amd you can set the diplay to hide ?none*/
