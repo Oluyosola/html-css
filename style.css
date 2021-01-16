@@ -1,9 +1,20 @@
+*{
+    box-sizing: border-box;
+    /* heps padding and the likes stay inside of the box without breaking */
+}
 body{
-    background-color:rgba(177, 177, 237);
-    
+    background-image:url(gallery_item_2.png);
+    /* url(gallery_item.png); */
+    background-size: 100px 80px;
+    /* background-size: contain; */
+    background-size: cover;
+    /* background-position: right bottom, left top;  */
+    background-repeat:no-repeat center fixed;
+    /* , repeat;  */
+    padding: 15px;  
     
 }
-h1{
+/* h1{
     width: 300px;
     text-align:center;
     color: #ff0000;
@@ -12,7 +23,7 @@ h1{
     border-color: blue black red yellow;
     margin-left:auto;
     margin-right:auto;
-}
+} */
 p{
     color: rgb(50, 21, 241);
 }
@@ -22,7 +33,7 @@ p.ridge{
     border-color:red;
     
 }
-h2{
+/* h2{
     border-style: solid;
     border-radius: 10px;
     background-color: green;
@@ -31,8 +42,8 @@ h2{
    max-height: 200px;
     max-width: 300px;
     text-align: left
-}
-.div{
+} */
+.hey{
     max-width:300px;
     /* height: 100px; */
     color:red;
@@ -44,24 +55,24 @@ h2{
     outline-width: medium;
     outline-offset: 10px;
 }
-    h3{
+    /* h3{
         text-align: right;
         vertical-align: middle;
         /* we have top, middle and bottom */
-        text-decoration: line-through;
+        /* text-decoration: line-through; */
         
         /* we also have overline and underline */
-        text-transform: capitalize;
+        /* text-transform: capitalize; */
         /* we also have uppercase and lower case */
-        text-indent: 10px;
+        /* text-indent: 10px;
         letter-spacing: 5px;
         line-height: 1.8;
         word-spacing:10px;
-        text-shadow: 2px 2px 5px green;
+        text-shadow: 2px 2px 5px green; */
        
         /* the first two is for the shadow and the last one is for the blur effect */
-        font-family: serif;
-    }
+        /* font-family: serif; */
+    /* } */ 
     .list{
         list-style-type: circle;
         color: purple;
@@ -74,7 +85,7 @@ h2{
         /* list-style-type: lower-roman; */
         /* image can be used it will be list-type-image */
     } 
-    ul{
+    /* ul{
         width: 30%;
         background-color: red;
         padding:20px;
@@ -83,7 +94,7 @@ h2{
         background-color: yellow;
         margin: 5px;
         padding: 10px;
-    }
+    } */
     .list3{
         width: 30%;
         background-color:purple;
@@ -133,4 +144,105 @@ td{
 tr:nth-child(even){background-color: green;
 
 }
-/* display are either in iline or blocck, you can set a default block element to inline and vice versa amd you can set the diplay to hide ?none*/
+.box{
+    float:left;
+    width: 33.33%;
+    padding: 30px;
+    
+}
+.clearfix::after{
+content: "";
+clear: both;
+display: table;
+}
+/* display are either in iline or blocck, you can set a default block element to inline and vice versa amd you can set the 
+diplay to hide ?none*/
+/* The problem with the <div> above occurs when the browser window is smaller than the width of the
+ element. The browser then adds a horizontal scrollbar to the page.
+
+Using max-width instead, in this situation, will improve the browser's handling of small windows.
+ This is important when making a site usable on small devices: */
+ /* five types of position: relative, absolute, sticky, fixed and static  after this elements can then be positioned right,
+  left, top and bottom you must specify top or any for sticky position to work*/
+  /* overflow property has four values: visible, hidden, scroll, auto overflow only works for block elements with specified height
+  auto and scroll is almost similar but it addsa scroll only when necc\essary 
+  there is overflow-x and overflow-y*/
+  /* float is used to specify how an element should float has right, left, inherit ans none, clear is most times used after the float property
+  it has the following property right, left, both, none, inherit */
+  /* clearfix is used to control overflowing elements in its contrainer and there is a new clear fix hak */
+  /* using flexbox to create flexible boxes */
+  /* float is useful for makeing nav menu */
+  /* display:inline-block is good for nav it nice for displaying elements horizontally and have advantages over block and inline */
+  /* css ombinators space, >(child) +(adjacent sibling) ~(general) sibling */
+  /* pseudo lasses are like a:visited{} */
+  p:first-child{
+      color: #000;
+  }
+  p:first-child i{
+      color: deeppink;
+  }
+  .nav{
+      
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      /* width: 200px; */
+      background-color: #333;
+      position: fixed;
+        }
+  ul li{
+      float: left;
+      /* border: 1px solid blue; */
+      /* background-color: deeppink;
+      dis */
+      /* display: inline; */
+      /* padding: 5px; */
+      /* text-decoration:none; */
+      
+  }
+  li a{
+      display:block;
+      /* width: 80px; */
+      padding: 14px 16px;
+      /* background-color: #dddddd; */
+      /* padding: 10px 20px; */
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      color: white;
+  }
+  li a:hover{
+      /* background-color: #555; */
+      
+      background-color:white;
+  }
+  li a:active{
+      background-color: #4CAF50;
+      color: white;
+  }
+  /* psseudo elements */
+  /* p::first-letter for first letter can be used to style marging, padding and more p::first-line for first line and can be used to style font, 
+  color bakground and more the before and aff\ter is used to add content to an elemnt e.g h1::before{ } ::selection{} is used to dtyle selected ontent*/
+  .drop{
+      position: relative;
+      display: inline-block;
+
+  }
+.drop-content{
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 8px 0;
+    min-width: 160px;
+    z-index: 1;
+    padding: 12px 16px;
+}
+.drop:hover .drop-content{
+display: block;
+}
+#favicon{
+    width: 100px;
+border: 10px solid transparent;
+padding: 15px;
+border-image: url(favicon.png) 30% round;
+/* you can use either round or stretch */
+}
